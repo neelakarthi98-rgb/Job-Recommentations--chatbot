@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>Recruiter Portal</title>
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='recruiter.css') }}">
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <h1>
+            Recruiter Portal
+        </h1>
+
+        <ul>
+
+            <li>
+                <a href="/">
+                    Home
+                </a>
+            </li>
+
+               
+
+        </ul>
+
+    </nav>
+
+    <!-- =========================
+         HERO
+    ========================== -->
+
+    <section class="hero">
+
+        <h2>
+            Post New Job Vacancy
+        </h2>
+
+        <p>
+            Hire talented candidates easily
+        </p>
+
+    </section>
+
+    <!-- =========================
+         FORM CONTAINER
+    ========================== -->
+
+    <div class="form-container">
+
+        <form action="/post-job"
+        method="POST">
+
+            <!-- COMPANY -->
+
+            <div class="input-group">
+
+                <label>
+                    Company Name
+                </label>
+
+                <input
+                    type="text"
+                    name="company"
+                    placeholder="Example: Google"
+                    required
+                >
+
+            </div>
+
+            <!-- ROLE -->
+
+            <div class="input-group">
+
+                <label>
+                    Job Role
+                </label>
+
+                <input
+                    type="text"
+                    name="role"
+                    placeholder="Example: Data Scientist"
+                    required
+                >
+
+            </div>
+
+            <!-- SKILLS -->
+
+            <div class="input-group">
+
+                <label>
+                    Required Skills
+                </label>
+
+                <input
+                    type="text"
+                    name="skills"
+                    placeholder="python, sql, machine learning"
+                    required
+                >
+
+            </div>
+
+            <!-- EXPERIENCE -->
+
+            <div class="input-group">
+
+                <label>
+                    Experience Required
+                </label>
+
+                <input
+                    type="text"
+                    name="experience"
+                    placeholder="2+ Years"
+                >
+
+            </div>
+
+            <!-- LOCATION -->
+
+            <div class="input-group">
+
+                <label>
+                    Job Location
+                </label>
+
+                <input
+                    type="text"
+                    name="location"
+                    placeholder="Chennai"
+                >
+
+            </div>
+
+            <!-- SALARY -->
+
+            <div class="input-group">
+
+                <label>
+                    Salary Package
+                </label>
+
+                <input
+                    type="text"
+                    name="salary"
+                    placeholder="8 LPA"
+                >
+
+            </div>
+
+            <!-- DESCRIPTION -->
+
+            <div class="input-group">
+
+                <label>
+                    Job Description
+                </label>
+
+                <textarea
+                    name="description"
+                    rows="6"
+                    placeholder="Enter job details..."
+                ></textarea>
+
+            </div>
+
+            <!-- BUTTON -->
+
+            <button type="submit">
+
+                <i class="fa-solid fa-paper-plane"></i>
+
+                Post Job
+
+            </button>
+
+        </form>
+
+    </div>
+
+</body>
+
+</html>

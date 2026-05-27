@@ -1,0 +1,456 @@
+<!-- templates/login.html -->
+
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>AI Job Portal - Login</title>
+
+    <!-- GOOGLE FONT -->
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+    <style>
+
+        *{
+            margin:0;
+            padding:0;
+            box-sizing:border-box;
+            font-family:'Poppins', sans-serif;
+        }
+
+        body{
+
+            height:100vh;
+
+            display:flex;
+
+            justify-content:center;
+
+            align-items:center;
+
+            background:
+            linear-gradient(
+                rgba(0,0,0,0.6),
+                rgba(0,0,0,0.7)
+            ),
+
+            url('https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1920&auto=format&fit=crop');
+
+            background-size:cover;
+            background-position:center;
+
+            overflow:hidden;
+        }
+
+        .container{
+
+            width:1100px;
+
+            height:650px;
+
+            display:flex;
+
+            backdrop-filter:blur(12px);
+
+            background:rgba(255,255,255,0.08);
+
+            border:1px solid rgba(255,255,255,0.15);
+
+            border-radius:25px;
+
+            overflow:hidden;
+
+            box-shadow:
+            0 10px 40px rgba(0,0,0,0.4);
+        }
+
+        /* LEFT */
+
+        .left{
+
+            width:55%;
+
+            padding:70px;
+
+            color:white;
+
+            display:flex;
+
+            flex-direction:column;
+
+            justify-content:center;
+        }
+
+        .logo{
+
+            font-size:42px;
+
+            font-weight:700;
+
+            margin-bottom:20px;
+
+            color:#60a5fa;
+        }
+
+        .title{
+
+            font-size:55px;
+
+            line-height:1.2;
+
+            margin-bottom:25px;
+
+            font-weight:700;
+        }
+
+        .desc{
+
+            font-size:18px;
+
+            line-height:1.8;
+
+            color:#d1d5db;
+
+            margin-bottom:40px;
+        }
+
+        .features{
+
+            display:flex;
+
+            flex-direction:column;
+
+            gap:18px;
+        }
+
+        .feature{
+
+            display:flex;
+
+            align-items:center;
+
+            gap:15px;
+
+            font-size:17px;
+        }
+
+        .feature i{
+
+            color:#60a5fa;
+
+            font-size:20px;
+        }
+
+        /* RIGHT */
+
+        .right{
+
+            width:45%;
+
+            background:white;
+
+            padding:60px 50px;
+
+            display:flex;
+
+            flex-direction:column;
+
+            justify-content:center;
+        }
+
+        .right h2{
+
+            font-size:38px;
+
+            margin-bottom:10px;
+
+            color:#111827;
+        }
+
+        .subtitle{
+
+            color:#6b7280;
+
+            margin-bottom:35px;
+        }
+
+        .input-box{
+
+            margin-bottom:22px;
+
+            position:relative;
+        }
+
+        .input-box i{
+
+            position:absolute;
+
+            top:18px;
+
+            left:16px;
+
+            color:#6b7280;
+        }
+
+        .input-box input,
+        .input-box select{
+
+            width:100%;
+
+            padding:15px 15px 15px 48px;
+
+            border:1px solid #d1d5db;
+
+            border-radius:14px;
+
+            font-size:15px;
+
+            outline:none;
+
+            transition:0.3s;
+        }
+
+        .input-box input:focus,
+        .input-box select:focus{
+
+            border-color:#2563eb;
+
+            box-shadow:
+            0 0 10px rgba(37,99,235,0.2);
+        }
+
+        button{
+
+            width:100%;
+
+            padding:15px;
+
+            border:none;
+
+            border-radius:14px;
+
+            background:linear-gradient(
+                135deg,
+                #2563eb,
+                #1e40af
+            );
+
+            color:white;
+
+            font-size:16px;
+
+            font-weight:600;
+
+            cursor:pointer;
+
+            transition:0.3s;
+        }
+
+        button:hover{
+
+            transform:translateY(-2px);
+
+            box-shadow:
+            0 10px 20px rgba(37,99,235,0.3);
+        }
+
+        .bottom{
+
+            margin-top:25px;
+
+            text-align:center;
+
+            color:#6b7280;
+        }
+
+        .bottom a{
+
+            color:#2563eb;
+
+            text-decoration:none;
+
+            font-weight:600;
+        }
+
+        @media(max-width:950px){
+
+            .container{
+
+                width:95%;
+
+                height:auto;
+
+                flex-direction:column;
+            }
+
+            .left,
+            .right{
+
+                width:100%;
+            }
+
+            .left{
+
+                padding:50px 35px;
+            }
+
+            .title{
+
+                font-size:38px;
+            }
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <!-- LEFT -->
+
+        <div class="left">
+
+            <div class="logo">
+                AI Job Portal
+            </div>
+
+            <div class="title">
+
+                Smart Career
+                <br>
+                Recommendations
+                <br>
+                Powered By AI
+
+            </div>
+
+            <div class="desc">
+
+                Discover jobs based on your skills,
+                connect with recruiters,
+                and accelerate your career journey
+                using intelligent recommendations.
+
+            </div>
+
+            <div class="features">
+
+                <div class="feature">
+                    <i class="fa-solid fa-robot"></i>
+                    AI Job Recommendations
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-briefcase"></i>
+                    Recruiter Job Posting
+                </div>
+
+                <div class="feature">
+                    <i class="fa-solid fa-comments"></i>
+                    Smart Career Chatbot
+                </div>
+
+            </div>
+
+        </div>
+
+        <!-- RIGHT -->
+
+        <div class="right">
+
+            <h2>Welcome Back 👋</h2>
+
+            <p class="subtitle">
+                Login to continue your journey
+            </p>
+
+            <form method="POST"
+            action="/login">
+
+                <!-- EMAIL -->
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-envelope"></i>
+
+                    <input
+                        type="email"
+                        name="email"
+                        placeholder="Enter Email"
+                        required
+                    >
+
+                </div>
+
+                <!-- PASSWORD -->
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-lock"></i>
+
+                    <input
+                        type="password"
+                        name="password"
+                        placeholder="Enter Password"
+                        required
+                    >
+
+                </div>
+
+                <!-- USER TYPE -->
+
+                <div class="input-box">
+
+                    <i class="fa-solid fa-user"></i>
+                <select name="user_type">
+    <option value="Job Seeker">Job Seeker</option>
+    <option value="Recruiter">Recruiter</option>
+</select>
+                    
+
+                </div>
+
+                <!-- BUTTON -->
+
+                <button type="submit">
+
+                    Login
+
+                </button>
+
+            </form>
+
+            <div class="bottom">
+
+                Don't have an account?
+
+                <a href="/signup">
+
+                    Create Account
+
+                </a>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</body>
+
+</html>

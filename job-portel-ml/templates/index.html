@@ -1,0 +1,200 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport"
+    content="width=device-width, initial-scale=1.0">
+
+    <title>AI Job Portal</title>
+
+    <!-- CSS -->
+
+    <link rel="stylesheet"
+    href="{{ url_for('static', filename='style.css') }}">
+
+    <!-- FONT AWESOME -->
+
+    <link rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
+
+</head>
+
+<body>
+
+    <!-- =========================
+         NAVBAR
+    ========================== -->
+
+    <nav>
+
+        <h1>AI Job Portal</h1>
+
+        <ul>
+
+            <li>
+                <a href="/">Home</a>
+            </li>
+
+            
+            <li>
+                <a href="/index">
+            <i class="fa-solid fa-user"></i>
+            User
+        </a>
+    </li>
+
+        </ul>
+
+    </nav>
+
+    <!-- =========================
+         HERO SECTION
+    ========================== -->
+
+    <section class="hero">
+
+        <h2>Find Your Dream Job</h2>
+
+        <p>
+            AI Powered Job Recommendation System
+        </p>
+
+    </section>
+
+    <!-- =========================
+         MAIN CONTAINER
+    ========================== -->
+
+    <div class="container">
+
+        <!-- =========================
+             RECOMMENDATION BOX
+        ========================== -->
+
+        <div class="recommendation-box">
+
+            <h2>
+                Job Recommendation
+            </h2>
+
+            <!-- ROLE -->
+
+            <label>
+                Enter Role
+            </label>
+
+            <input
+                type="text"
+                id="role"
+                placeholder="Example: Data Scientist"
+            >
+
+            <!-- SKILLS -->
+
+            <label>
+                Enter Skills (comma separated)
+            </label>
+
+            <input
+                type="text"
+                id="skills"
+                placeholder="Example: python, sql, machine learning"
+            >
+
+            <!-- BUTTON -->
+
+            <button onclick="findJobs()">
+
+                Find Jobs
+
+            </button>
+
+            <!-- RESULTS -->
+
+            <div id="results"></div>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         FLOATING CHAT ICON
+    ========================== -->
+
+    <div class="chat-icon"
+    onclick="toggleChat()">
+
+        <i class="fa-solid fa-comments"></i>
+
+    </div>
+
+    <!-- =========================
+         CHATBOT POPUP
+    ========================== -->
+
+    <div class="chatbot-container"
+    id="chatbot">
+
+        <!-- HEADER -->
+
+        <div class="chat-header">
+
+            <h3>
+                AI Job Assistant
+            </h3>
+
+            <span onclick="toggleChat()">
+
+                <i class="fa-solid fa-xmark"></i>
+
+            </span>
+
+        </div>
+
+        <!-- BODY -->
+
+        <div class="chat-body"
+        id="chatBody">
+
+            <div class="bot-message">
+
+                Hello 👋 Welcome to AI Job Portal.
+                Ask me about jobs, skills,
+                recruiter jobs, and careers.
+
+            </div>
+
+        </div>
+
+        <!-- FOOTER -->
+
+        <div class="chat-footer">
+
+            <input
+                type="text"
+                id="chatInput"
+                placeholder="Ask something..."
+            >
+
+            <button onclick="sendMessage()">
+
+                Send
+
+            </button>
+
+        </div>
+
+    </div>
+
+    <!-- =========================
+         JAVASCRIPT
+    ========================== -->
+
+    <script src="{{ url_for('static', filename='script.js') }}"></script>
+
+</body>
+
+</html>
