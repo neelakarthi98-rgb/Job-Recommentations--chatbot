@@ -1,0 +1,658 @@
+/* =====================================
+   GOOGLE FONT
+===================================== */
+
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+    font-family:'Poppins',sans-serif;
+}
+
+body{
+
+    background:
+    linear-gradient(
+        rgba(7,17,32,0.90),
+        rgba(7,17,32,0.92)
+    ),
+
+    url('https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1600&auto=format&fit=crop');
+
+    background-size:cover;
+
+    background-position:center;
+
+    background-attachment:fixed;
+
+    color:white;
+
+    min-height:100vh;
+
+    overflow-x:hidden;
+}
+
+/* =====================================
+   NAVBAR
+===================================== */
+
+nav{
+
+    width:100%;
+
+    padding:14px 45px;
+
+    background:rgba(0,0,0,0.35);
+
+    backdrop-filter:blur(10px);
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    position:fixed;
+
+    top:0;
+
+    z-index:1000;
+}
+
+nav h1{
+
+    font-size:22px;
+
+    font-weight:600;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #8b5cf6
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+nav ul{
+
+    display:flex;
+
+    gap:22px;
+
+    list-style:none;
+}
+
+nav ul li a{
+
+    text-decoration:none;
+
+    color:#d1d5db;
+
+    font-size:12px;
+
+    transition:0.3s;
+}
+
+nav ul li a:hover{
+
+    color:#60a5fa;
+}
+
+/* =====================================
+   HERO SECTION
+===================================== */
+
+.hero{
+
+    height:280px;
+
+    display:flex;
+
+    flex-direction:column;
+
+    justify-content:center;
+
+    align-items:center;
+
+    text-align:center;
+
+    position:relative;
+
+    z-index:10;
+}
+
+.hero h2{
+
+    font-size:42px;
+
+    font-weight:600;
+
+    margin-bottom:8px;
+
+    background:linear-gradient(
+        90deg,
+        #ffffff,
+        #8b5cf6
+    );
+
+    -webkit-background-clip:text;
+
+    -webkit-text-fill-color:transparent;
+}
+
+.hero p{
+
+    font-size:14px;
+
+    color:#d1d5db;
+}
+
+/* =====================================
+   MAIN CONTAINER
+===================================== */
+
+.container{
+
+    width:85%;
+
+    margin:auto;
+
+    position:relative;
+
+    z-index:10;
+}
+
+/* =====================================
+   RECOMMENDATION BOX
+===================================== */
+
+.recommendation-box{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:22px;
+
+    padding:28px;
+
+    backdrop-filter:blur(14px);
+
+    box-shadow:0px 8px 25px rgba(0,0,0,0.35);
+
+    margin-bottom:45px;
+}
+
+.recommendation-box h2{
+
+    font-size:24px;
+
+    margin-bottom:22px;
+
+    font-weight:600;
+}
+
+/* =====================================
+   LABELS
+===================================== */
+
+.recommendation-box label{
+
+    display:block;
+
+    margin-bottom:7px;
+
+    font-size:13px;
+
+    color:#d1d5db;
+}
+
+/* =====================================
+   INPUTS
+===================================== */
+
+.recommendation-box input{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:12px;
+
+    background:#0f172a;
+
+    border:1px solid #1e293b;
+
+    color:white;
+
+    margin-bottom:18px;
+
+    font-size:12px;
+
+    transition:0.3s;
+}
+
+.recommendation-box input:focus{
+
+    border-color:#8b5cf6;
+
+    box-shadow:0px 0px 12px rgba(139,92,246,0.35);
+}
+
+.recommendation-box input::placeholder{
+
+    color:#94a3b8;
+}
+
+/* =====================================
+   BUTTON
+===================================== */
+
+.recommendation-box button{
+
+    width:100%;
+
+    padding:13px;
+
+    border:none;
+
+    border-radius:12px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    color:white;
+
+    font-size:13px;
+
+    font-weight:500;
+
+    cursor:pointer;
+
+    transition:0.3s;
+}
+
+.recommendation-box button:hover{
+
+    transform:scale(1.01);
+
+    box-shadow:0px 0px 18px rgba(139,92,246,0.4);
+}
+
+/* =====================================
+   RESULTS
+===================================== */
+
+#results{
+
+    margin-top:30px;
+
+    display:grid;
+
+    grid-template-columns:
+    repeat(auto-fit,minmax(260px,1fr));
+
+    gap:20px;
+}
+
+/* =====================================
+   JOB CARD
+===================================== */
+
+.job-card{
+
+    background:rgba(255,255,255,0.06);
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    border-radius:20px;
+
+    padding:22px;
+
+    backdrop-filter:blur(10px);
+
+    transition:0.4s;
+}
+
+.job-card:hover{
+
+    transform:translateY(-5px);
+
+    box-shadow:0px 8px 25px rgba(124,58,237,0.35);
+}
+
+.job-top{
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+
+    margin-bottom:14px;
+}
+
+.job-top h3{
+
+    font-size:18px;
+
+    color:#60a5fa;
+}
+
+/* MATCH BADGE */
+
+.match-badge{
+
+    background:#1d4ed8;
+
+    padding:5px 10px;
+
+    border-radius:20px;
+
+    font-size:10px;
+}
+
+/* JOB TEXT */
+
+.job-card p{
+
+    margin-bottom:10px;
+
+    color:#d1d5db;
+
+    font-size:12px;
+
+    line-height:1.6;
+}
+
+/* APPLY BUTTON */
+
+.apply-btn{
+
+    margin-top:10px;
+
+    width:100%;
+
+    padding:10px;
+
+    border:none;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    color:white;
+
+    font-size:12px;
+
+    cursor:pointer;
+}
+
+/* =====================================
+   CHAT ICON
+===================================== */
+
+.chat-icon{
+
+    position:fixed;
+
+    bottom:22px;
+    right:22px;
+
+    width:58px;
+    height:58px;
+
+    border-radius:50%;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    display:flex;
+
+    justify-content:center;
+
+    align-items:center;
+
+    color:white;
+
+    font-size:22px;
+
+    cursor:pointer;
+
+    z-index:9999;
+
+    box-shadow:0px 0px 20px rgba(124,58,237,0.4);
+}
+
+/* =====================================
+   CHATBOT
+===================================== */
+
+.chatbot-container{
+
+    position:fixed;
+
+    right:22px;
+    bottom:90px;
+
+    width:320px;
+    height:460px;
+
+    background:#0f172a;
+
+    border-radius:22px;
+
+    overflow:hidden;
+
+    display:none;
+
+    flex-direction:column;
+
+    z-index:9999;
+
+    border:1px solid rgba(255,255,255,0.08);
+
+    box-shadow:0px 10px 35px rgba(0,0,0,0.45);
+}
+
+/* HEADER */
+
+.chat-header{
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    padding:15px;
+
+    display:flex;
+
+    justify-content:space-between;
+
+    align-items:center;
+}
+
+.chat-header h3{
+
+    font-size:15px;
+}
+
+.chat-header span{
+
+    font-size:18px;
+
+    cursor:pointer;
+}
+
+/* BODY */
+
+.chat-body{
+
+    flex:1;
+
+    padding:15px;
+
+    overflow-y:auto;
+
+    background:#071120;
+}
+
+/* BOT MESSAGE */
+
+.bot-message{
+
+    background:#111827;
+
+    padding:10px 12px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    max-width:80%;
+
+    font-size:11px;
+
+    line-height:1.5;
+
+    color:#e5e7eb;
+}
+
+/* USER MESSAGE */
+
+.user-message{
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    padding:10px 12px;
+
+    border-radius:12px;
+
+    margin-bottom:10px;
+
+    margin-left:auto;
+
+    max-width:80%;
+
+    font-size:11px;
+
+    line-height:1.5;
+}
+
+/* FOOTER */
+
+.chat-footer{
+
+    display:flex;
+
+    gap:6px;
+
+    padding:12px;
+
+    background:#0f172a;
+
+    border-top:1px solid rgba(255,255,255,0.08);
+}
+
+.chat-footer input{
+
+    flex:1;
+
+    padding:10px;
+
+    border:none;
+
+    outline:none;
+
+    border-radius:10px;
+
+    background:#111827;
+
+    color:white;
+
+    font-size:11px;
+}
+
+.chat-footer button{
+
+    border:none;
+
+    padding:10px 14px;
+
+    border-radius:10px;
+
+    background:linear-gradient(
+        90deg,
+        #2563eb,
+        #9333ea
+    );
+
+    color:white;
+
+    font-size:11px;
+
+    cursor:pointer;
+}
+
+/* =====================================
+   MOBILE
+===================================== */
+
+@media(max-width:768px){
+
+    nav{
+
+        padding:12px 18px;
+
+        flex-direction:column;
+
+        gap:12px;
+    }
+
+    .hero h2{
+
+        font-size:32px;
+    }
+
+    .hero p{
+
+        font-size:12px;
+    }
+
+    .recommendation-box{
+
+        padding:20px;
+    }
+
+    .chatbot-container{
+
+        width:94%;
+
+        right:10px;
+    }
+}
